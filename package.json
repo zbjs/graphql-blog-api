@@ -3,25 +3,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/server.js"
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbjs/graphql-blog-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "bcryptjs": "^3.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "express-graphql": "^0.12.0",
-    "graphql": "^16.10.0",
-    "graphql-tools": "^9.0.13",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.10.0"
+  "bugs": {
+    "url": "https://github.com/zbjs/graphql-blog-api/issues"
   },
+  "homepage": "https://github.com/zbjs/graphql-blog-api#readme",
+  "description": "",
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "graphql": "^16.10.0"
   }
 }
